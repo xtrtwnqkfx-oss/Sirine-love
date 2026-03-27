@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Question 💖</title>
+<style>
+    body {
+        text-align: center;
+        font-family: Arial;
+        margin-top: 100px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+</style>
+</head>
+<body>
+
+<h2>Sirine, est-ce que tu m'aimes ? 💕</h2>
+
+<button id="oui">Oui ❤️</button>
+<button id="non">Non 😢</button>
+
+<script>
+let tailleOui = 16;
+let tailleNon = 16;
+
+document.getElementById("oui").onclick = function() {
+    alert("😻 moi aussi je t'aime");
+}
+
+document.getElementById("non").onclick = function() {
+    tailleOui += 6;
+    tailleNon -= 12;
+
+    if (tailleNon < 5) tailleNon = 5; // éviter que le bouton disparaisse
+
+    document.getElementById("oui").style.fontSize = tailleOui + "px";
+    document.getElementById("non").style.fontSize = tailleNon + "px";
+}
+</script>
+
+</body>
+</html>
